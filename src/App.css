@@ -1,0 +1,27 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.fd {
+  display: flex;
+}
+
+.-activeNav {
+  color: rgba( 246, 246, 246, 1);
+}
