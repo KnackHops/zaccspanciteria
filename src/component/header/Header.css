@@ -1,12 +1,14 @@
 div.header-con {
     padding: 0 10vw;
-    height: 100vh;
+    height: 90vh;
+    min-height: 600px;
     background-color: rgba( 0, 10, 5, 1);
 }
 
 header {
     height: 100%;
     align-items: center;
+    position: relative;
 }
 
 header > div:first-child {
@@ -20,7 +22,11 @@ header > div:nth-child(2) {
 
 div.title-con {
     color: rgba( 246, 246, 246, 1 );
-    font-size: 250%;
+    font-size: 300%;
+}
+
+div.title-con h1 {
+    font-weight: 600;
 }
 
 div.nav-con {
@@ -32,6 +38,7 @@ div.nav-burger {
     position: absolute;
     width: 50px;
     height: 50px;
+    top: 15px;
     right: 0;
     flex-direction: column;
     justify-content: space-around;
@@ -50,34 +57,129 @@ div.nav-burger > span {
 }
 
 div.nav-con ul.nav-list {
-    background-color: wheat;
     padding: 35px 0;
     font-size: 150%;
     justify-content: space-around;
+}
+
+ul.nav-list li a {
+    font-weight: 600;
+    color: rgba( 246, 246, 246, 1 );
+    padding: 5px 10px;
+}
+
+ul.nav-list li a.-activeNav {
+    color: black;
+    background-color: rgba( 246, 165, 76, 1 );
+}
+
+div.header-design-con {
+    position: absolute;
+    background-color: rgba( 246, 165, 76, 1 );
+    height: 60%;
+    min-height: 450px;
+    width: 60%;
+    max-width: 750;
+    right: 50px;
+    top: 150px;
+    border-radius: 75px;
+    overflow: hidden;
+}
+
+div.bowl-con {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+}
+
+div.bowl-con > div {
+    position: absolute;
+}
+
+div.bowl-upper {
+    top: 280px;
+    height: 40px;
+    width: 350px;
+    background-color: rgba( 55, 59, 45, 1);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    z-index: 1;
+}
+
+div.bowl-side {
+    top: 292px;
+    left: 280px;
+    height: 300px;
+    width: 40px;
+    background-color: rgba( 55, 59, 45, 1);
+    transform: rotate( 10deg );
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    z-index: 1;
+}
+
+div.bowl-bottom {
+    z-index: 0;
+    height: 300px;
+    width: 302px;
+    border-bottom-right-radius: 50px;
+    top: 287px;
+    background: linear-gradient( to bottom, rgba( 55, 59, 45, 1 ), rgba( 133, 96, 67, 1 ) );
+}
+
+@media only screen and ( max-height: 800px ) {
+    div.header-design-con {
+        top: 100px;
+    }
 }
 
 @media only screen and ( max-width: 1140px ) {
     div.header-con {
         padding: 0 5vw;
     }
+    
+    div.title-con {
+        font-size: 275%;
+    }
 
     header > div:nth-child(2) {
         width: 450px;
-        
+    }
+
+    div.header-design-con {
+        width: 55%;
     }
 }
 
 @media only screen and ( max-width: 860px ) {
+    header > div:first-child {
+        align-self: flex-start;
+    }
+    
+    div.title-con {
+        font-size: 250%;
+    }
+
     div.nav-con > nav {
         position: fixed;
         width: 100%;
         right: 0;
         transform: translateX( 100% );
+        z-index: 998;
     }
 
     div.nav-con.-activeBurger > nav {
-        transition: all ease-in .5s;
+        background-color: rgba( 246, 165, 76, 1 );
+        transition: transform ease-out .35s;
         transform: translateX( 0 );
+    }
+
+    div.nav-con.-activeBurger li a {
+        color: rgba( 0, 10, 5, 1);
+    }
+
+    div.nav-con.-activeBurger li a.-activeNav {
+        color: white;
     }
 
     div.nav-con nav ul {
@@ -89,5 +191,12 @@ div.nav-con ul.nav-list {
     div.nav-burger {
         visibility: visible;
         z-index: 9999;
+    }
+
+    div.header-design-con {
+        width: 100%;
+        border-radius: 0;
+        right: 0;
+        top: 100px;
     }
 }

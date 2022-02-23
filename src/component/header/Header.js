@@ -91,6 +91,13 @@ const Header = () => {
                     </nav>
                 </div>
             </header>
+                <div className='header-design-con'>
+                    <div className='bowl-con'>
+                        <div className='bowl-upper' />
+                        <div className='bowl-side' />
+                        <div className='bowl-bottom' />
+                    </div>
+                </div>
         </div>
     )
 }
