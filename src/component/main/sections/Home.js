@@ -1,10 +1,17 @@
 import SectionWrapper from "../../../wrapper/SectionWrapper"
+import Gallery from "./Gallery";
+import Menu from "./Menu";
+import './Home.css';
 
 const Home = () => {
     return (
-        <SectionWrapper sectionClass={ "home" }>
-            <p> yo </p>
-        </SectionWrapper>
+        <>
+            <Gallery />
+            <Menu />
+            <SectionWrapper sectionClass={ "home-testimony" }>
+
+            </SectionWrapper>
+        </>
     )
 }
 
