@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import SectionWrapper from "../../../wrapper/SectionWrapper"
 import { ScrollContext } from "../../UnderRoot";
+import './Gallery.css';
 
 const Gallery = () => {
     const { scroll } = useContext( ScrollContext );

@@ -21,7 +21,3 @@ a {
 .fd {
   display: flex;
 }
-
-.-activeNav {
-  color: rgba( 246, 246, 246, 1);
-}

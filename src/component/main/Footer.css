@@ -1,4 +1,6 @@
 div.footer-con {
     height: 100px;
-    background-color: aqua;
+    /* background-color: rgba( 0, 10, 5, 1); */
+    /* lighter tone */
+    background-color: rgba( 0, 15, 10, 1);
 }

@@ -4,7 +4,7 @@ import { throttle } from "throttle-debounce";
 const useScrollMonitor = () => {
     const [ scroll, setScroll ] = useState()
 
-    const scrollHandler = () => {
+    const scrollHandler = e => {
         // get the current scroll value of the html
         const st = document.querySelector( "html" ).scrollTop;
 
