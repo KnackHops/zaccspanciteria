@@ -131,9 +131,15 @@ const Place = () => {
         const difference = selectedImg - middleIndexGetter();
         const cond = i => i <= lastIndex
         const changeIndexFunc = i => i+=1
-        console.log( difference )
 
         if ( difference < 0 ) {
+            // for this one, we just need to deduct the last index
+            // with the difference
+            // say the difference is 5 ( -5, but turned possitive through Math.abs )
+            // lastIndex is 10 ( 11 for length )
+            // we get 5
+            // which means the last item to the right will be 5
+            // with the first item being the selectedImg + 1
             const lesserCond = i => i <= lastIndex - ( Math.abs( difference ) )
 
             return loopReturner( ( selectedImg + 1 ), lesserCond, changeIndexFunc, "left" )
@@ -141,7 +147,10 @@ const Place = () => {
             let returnedVal = loopReturner( ( selectedImg + 1 ), cond, changeIndexFunc, "left" )
 
             if ( difference > 0 ) {
-
+                // for this one, we just need to get the difference
+                // deduct by one to go for index
+                // example we have 1 as difference
+                // we need 0 for the nextReturner instead
                 const greaterCond = i => i <= ( difference - 1 )
 
                 returnedVal = returnedVal.concat( loopReturner( 0, greaterCond, changeIndexFunc, "left", returnedVal.length ) )
