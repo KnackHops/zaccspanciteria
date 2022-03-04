@@ -1,5 +1,80 @@
 div.home-place-con {
     height: 100vh;
+    min-height: 570px;
     background-color: rgba( 0, 15, 10, 1 );
     padding-top: 80px;
+}
+
+div.home-place-con > section {
+    height: 100%;
+    background-color: blue;
+    overflow: hidden;
+}
+
+div.carousel-con {
+    position: relative;
+    overflow: hidden;
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+div.carousel-mid {
+    position: absolute;
+    /* essentially margin 50px on top and bottom */
+    /* or turn to padding, but for not since the img */
+    /* is expected to be a direct child of this div */
+    /* we use a more forward approach, 100px on total height */
+    /* and align center, through the flex container */
+    height: calc(100% - 100px);
+    left: calc(50% - 450px);
+    width: 100%;
+    max-width: 900px;
+    background-color: wheat;
+    z-index: 10;
+}
+
+div.carousel-items {
+    overflow-x: hidden;
+    flex: 1;
+    height: 100%;
+    background-color: rgb(240, 248, 255, .7);
+    padding: 50px 0;
+    gap: 900px;
+    /* we use this to offset the divs on either side */
+    margin-left: -50%;
+    margin-right: -50%;
+}
+
+div.carousel-items > div {
+    position: relative;
+    flex: 1;
+    background-color: aqua;
+}
+
+div.carousel-items > div ul {
+    align-items: center;
+}
+
+div.carousel-prev-items > ul {
+    height: 100%;
+    background-color: rgba( 0, 15, 10, .5 );
+}
+
+div.carousel-next-items > ul {
+    height: 100%;
+    background-color: rgba( 0, 15, 10, .5 );
+}
+
+div.carousel-items li {
+    width: 900px;
+    border: 5px solid black;
+    position: absolute;
+}
+
+@media only screen and ( max-width: 900px ) {
+    div.carousel-mid {
+        left: 0;
+    }
 }

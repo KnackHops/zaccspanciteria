@@ -112,8 +112,8 @@ const Menu = () => {
         // we can't deduct too much because of smaller viewports
         // the sc is the top of the viewable screen
 
-        if ( scroll > 2650 && pathname === "/" ) {
-            console.log( "hey!" )
+        if ( scroll > 2650 && pathname === "/" && scroll < 3660  ) {
+            console.log( "hey! we can do something here if you want!" )
         } 
     }, [ scroll ] )
 
