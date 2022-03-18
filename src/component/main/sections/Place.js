@@ -9,10 +9,23 @@ const Place = () => {
 
     // we can separate this whole thing as its own component, but I don't see any extra use for now
     const itemsToCarousel = useMemo( () => {
-        return [...Array( 11 ).keys() ].map( num => {
+        return [
+            `https://i1.lensdump.com/i/rLoYAx.jpg`,
+            `https://i.lensdump.com/i/rLopV0.jpg`,
+            `https://i3.lensdump.com/i/rLoScQ.jpg`,
+            `https://i2.lensdump.com/i/rLolEA.jpg`,
+            `https://i1.lensdump.com/i/rLoO5q.jpg`,
+            `https://i.lensdump.com/i/rLovse.jpg`,
+            `https://i3.lensdump.com/i/rLo3uF.jpg`,
+            `https://i2.lensdump.com/i/rLomZ7.jpg`,
+            `https://i1.lensdump.com/i/rLoqUb.jpg`,
+            `https://i.lensdump.com/i/rLo9Tz.jpg`,
+            `https://i3.lensdump.com/i/rLoQy5.jpg`,
+            `https://i2.lensdump.com/i/rLoCQv.jpg`
+        ].map( src => {
             return {
-                src: "",
-                alt: `item no. ${ num }`
+                src,
+                alt: `plants`
             }
         } )
     }, [ ] )
@@ -45,7 +58,7 @@ const Place = () => {
         const returnedVal = [];
 
         let _heightNum = 98;
-        let _pos = 700;
+        let _pos = 650;
         let _zIndex = 4;
 
         if ( additional ) {
@@ -53,11 +66,11 @@ const Place = () => {
             // we deduct the necessary values before looping again
             // this creates a flow for different indexes involved
             _heightNum = _heightNum - ( 4 * additional );
-            _pos = _pos - ( 50 * additional );
+            _pos = _pos - ( 100 * additional );
             _zIndex = _zIndex - additional;
         }
 
-        for ( let i = start, pos=_pos, heightNum=_heightNum, zIndex=_zIndex; cond( i ); i = changeIndexFunc( i ), pos-=50, heightNum-=4, zIndex-=1 ) {
+        for ( let i = start, pos=_pos, heightNum=_heightNum, zIndex=_zIndex; cond( i ); i = changeIndexFunc( i ), pos-=100, heightNum-=4, zIndex-=1 ) {
             let posStr = "";
 
             if ( pos < 0 ) {
@@ -163,8 +176,10 @@ const Place = () => {
     return (
         <SectionWrapper sectionClass={ "home-place" }>
             <div className="carousel-con fd">
-                <div className="carousel-mid">
+                <div className="carousel-mid fd">
                     <img src={ `${ itemsToCarousel[ selectedImg ].src }` } alt={ itemsToCarousel[ selectedImg ].alt } />
+                    <span  className="prev-btn-carousel" onClick={ prevHandler }/>
+                    <span  className="next-btn-carousel" onClick={ nextHandler }/>
                 </div>
                 <div className="carousel-items fd">
                     <div className="carousel-prev-items" onClick={ prevHandler }>

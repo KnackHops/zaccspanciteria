@@ -1,4 +1,5 @@
 import SectionWrapper from "../../../wrapper/SectionWrapper"
+import './Contacts.css'
 
 const Contacts = () => {
     return (
