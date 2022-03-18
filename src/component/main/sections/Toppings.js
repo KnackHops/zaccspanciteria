@@ -5,7 +5,6 @@ import './Toppings.css'
 const Toppings = () => {
     return (
         <>
-            <Place />
             <SectionWrapper sectionClass={ "toppings" }>
             </SectionWrapper>
         </>
