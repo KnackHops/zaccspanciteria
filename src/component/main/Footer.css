@@ -1,0 +1,24 @@
+div.footer-con {
+    /* background-color: rgba( 0, 10, 5, 1); */
+    /* lighter tone */
+    background-color: rgba( 0, 15, 10, 1);
+    color: rgba( 246, 246, 246, 1 );
+    padding: 20px;
+}
+
+footer {
+    padding: 0 10vw;
+    justify-content: space-around;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer div a {
+    color: rgba(44, 186, 117, 1);
+}
+
+footer div a:hover {
+    color: rgba( 10, 100, 150, 1 );
+}

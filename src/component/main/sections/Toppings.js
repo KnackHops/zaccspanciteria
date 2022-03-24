@@ -1,11 +1,13 @@
-import SectionWrapper from "../../../wrapper/SectionWrapper"
+import BukoFestival from "./BukoFestival"
+import Place from "./Place"
 
 const Toppings = () => {
     return (
-        <SectionWrapper sectionClass={ "toppings" }>
-
-        </SectionWrapper>
+        <>
+            <BukoFestival />
+            <Place />
+        </>
     )
 }
 
-export default Toppings;
+export default Toppings

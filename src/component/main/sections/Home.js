@@ -1,10 +1,17 @@
-import SectionWrapper from "../../../wrapper/SectionWrapper"
+import Gallery from "./Gallery";
+import Menu from "./Menu";
+import './Home.css';
+import Contacts from "./Contacts";
+import BukoFestival from "./BukoFestival";
 
 const Home = () => {
     return (
-        <SectionWrapper sectionClass={ "home" }>
-            <p> yo </p>
-        </SectionWrapper>
+        <>
+            <Gallery />
+            <Menu />
+            <BukoFestival />
+            <Contacts />
+        </>
     )
 }
 

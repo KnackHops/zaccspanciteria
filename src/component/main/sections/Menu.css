@@ -1,0 +1,93 @@
+div.menu-con {
+    overflow-x: hidden;
+    min-height: 1080px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../../../images/bamboo-side.svg');
+    background-repeat: no-repeat;
+    background-position: 20px 110%;
+    background-color: rgba( 246, 246, 230, 1 );
+    padding: 130px 0 100px 0;
+}
+
+section.menu-inside {
+    opacity: 0;
+    width: 1000px;
+    box-shadow: 0 5px 5px black;
+    border-radius: 2px;
+    background-color: rgba(0, 15, 10, 1);
+    color: rgba( 246, 246, 246, 1 );
+    font-size: 135%;
+    font-weight: 1000;
+    padding-top: 2px;
+    transform: translateX(100%);
+    transition: all .25s ease-in;
+}
+
+section.menu-inside.-see {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section.menu-inside h2 {
+    text-align: center;
+    background-color: rgba( 246, 165, 76, 1);
+    color: rgba( 0, 15, 10, 1 );
+    font-size: 160%;
+    width: calc( 100% + 20px );
+    box-shadow: 0 0 5px rgba( 0, 15, 10, 1 );
+    margin-left: -10px;
+}
+
+section.menu-inside h3 {
+    padding-left: 40px;
+    text-align: start;
+    font-size: 140%;
+}
+
+section.menu-inside h3 {
+    font-size: 140%;
+}
+
+section.menu-inside ul {
+    padding: 5px 0;
+}
+
+ul.item-level > li > p {
+    color: rgba( 246, 165, 76, 1);
+    padding-left: 60px;
+}
+
+ul.price-level > li > p {
+    position: relative;
+    display: flex;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    box-shadow: 0 0 4px rgba( 246, 246, 246, 1);
+    background: linear-gradient( to right, rgba( 0, 15, 10, .15 ) -20%, transparent, rgba( 0, 15, 10, .15 ) 120% );
+    background: -o-linear-gradient( to right, rgba( 0, 15, 10, .15 ) -20%, transparent, rgba( 0, 15, 10, .15 ) 120% );
+    background: -moz-linear-gradient( to right, rgba( 0, 15, 10, .15 ) -20%, transparent, rgba( 0, 15, 10, .15 ) 120% );
+    background: -webkit-linear-gradient( to right, rgba( 0, 15, 10, .15 ) -20%, transparent, rgba( 0, 15, 10, .15 ) 120% );
+    background-color: rgba( 246, 246, 230, 1 );
+    color: rgba( 0, 15, 10, 1 );
+    padding: 2px 0px;
+    justify-content: space-around;
+}
+
+@media only screen and ( max-width: 870px ) {
+    section.menu-inside h3 {
+        padding-left: 20px;
+    }
+    ul.item-level > li > p {
+        padding-left: 30px;
+    }
+}
+
+@media only screen and ( max-width: 500px ) {
+    section.menu-inside h3 {
+        padding-left: 10px;
+    }
+    ul.item-level > li > p {
+        padding-left: 17.5px;
+    }
+}

@@ -1,0 +1,127 @@
+div.buko-festival-con {
+    background-color: rgba( 44, 186, 117, 1);
+    padding: 20px 0 60px 0;
+    position: relative;
+}
+
+div.buko-festival-con > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba( 246, 165, 76, 1 ); */
+    background-color: rgba( 0, 15, 10, 1 );
+    background-image: url('/src/images/festivedecor.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 300px;
+    font-size: 140%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+div.buko-festival-con::after {
+    content: "";
+    position: absolute;
+    width: calc(100vw - 200px);
+    left: 100px;
+    border-radius: 10px;
+    max-width: 100%;
+    background-color: rgba( 246, 165, 76, 1 );
+    box-shadow: 0 0 5px rgba( 0, 15, 10, 1 );
+    height: 10px;
+    bottom: 30px;
+}
+
+div.buko-festival-con > section h2 {
+    margin: 30px 0;
+    padding: 0 20px 0 20px;
+    font-size: 180%;
+    border-radius: 5px;
+    color: rgba( 246, 165, 76, 1 );
+    text-shadow: 0 0 5px rgba( 0, 15, 10, 1 );
+    background-color: rgba( 44, 186, 117, 1 );
+}
+
+div.buko-festival-con > section > div {
+    flex: 1;
+    width: 100%;
+}
+
+div.buko-festival-con > section > div::before,
+div.buko-festival-con > section > div::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+    background-color: rgba( 246, 165, 76, 1 );
+    box-shadow: 0 0 5px rgba( 0, 15, 10, 1 );
+    bottom: 25px;
+}
+
+div.buko-festival-con > section > div::before {
+    left: 20px;
+}
+
+div.buko-festival-con > section > div::after {
+    right: 20px;
+}
+
+div.buko-list-con > ul {
+    padding: 40px 0;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+div.buko-list-con li {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    background-color: rgba( 246, 246, 230, 1 );
+    background-image: url('/src/images/demonslayerref.svg');
+    background-size: 85px;
+    background-position: center;
+}
+
+div.buko-list-con li::before,
+div.buko-list-con li::after {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 120px;
+    background-image: linear-gradient( to right,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
+    background-image: -moz-linear-gradient( to right,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
+    background-image: -o-linear-gradient( to right,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
+    background-image: -webkit-linear-gradient( to right,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
+    box-shadow: 0 0 10px rgba( 0, 15, 10, 1 );
+    border-radius: 5px;
+}
+
+div.buko-list-con li:nth-child(even)::after,
+div.buko-list-con li:nth-child(odd)::before {
+    background-color: rgba( 44, 186, 117, 1 );
+}
+
+div.buko-list-con li:nth-child(even)::before,
+div.buko-list-con li:nth-child(odd)::after {
+    background-color: rgba(246, 165, 76, 1);
+}
+
+div.buko-list-con li::before {
+    transform: rotate(-40deg) translateX(-30px) translateY(-30px);
+    top: -15px;
+    left: -15px;
+}
+
+div.buko-list-con li::after {
+    transform: rotate(-40deg) translateX(30px) translateY(30px);
+    bottom: -15px;
+    right: -15px;
+}
+
+div.buko-list-con li img {
+    max-width: 400px;
+    min-width: 100%;
+}
