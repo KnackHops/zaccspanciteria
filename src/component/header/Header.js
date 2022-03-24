@@ -15,11 +15,11 @@ const Header = () => {
 
     // self explanatory
     // e = null, for manual calls
-    const burgerHandler = useCallback( ( e = null ) => {
+    const burgerHandler = ( e = null ) => {
         if ( e ) e.preventDefault();
 
         setBurger( !openBurger );
-    }, [ setBurger ] )
+    }
 
     // whenever a link is clicked we close the burger if it's open
     const linkClicked = () => {
