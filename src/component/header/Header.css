@@ -155,10 +155,10 @@ div.smoke-con > div.actual-smoke {
     visibility: hidden;
     height: 60px;
     flex: 1;
-    background-image: linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
-    background-image: -moz-linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
-    background-image: -o-linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
-    background-image: -webkit-linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: linear-gradient( 360deg, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: -moz-linear-gradient( 360deg, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: -o-linear-gradient( 360deg, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: -webkit-linear-gradient( 360deg, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
     z-index: 2;
     border-radius: 20px;
     animation-name: smoke-anim;
@@ -201,10 +201,10 @@ div.egg-white {
     height: 25px;
     width: 170px;
     background-color: white;
-    background-image: linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
-    background-image: -moz-linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
-    background-image: -o-linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
-    background-image: -webkit-linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: linear-gradient( 180deg, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: -moz-linear-gradient( 180deg, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: -o-linear-gradient( 180deg, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: -webkit-linear-gradient( 180deg, rgba( 246, 246, 246, 1 ), wheat );
     border-top-right-radius: 500px;
 }
 
@@ -243,10 +243,10 @@ div.bowl-upper {
     height: 40px;
     width: 350px;
     background-color: rgba( 55, 59, 45, 1);
-    background-image: linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
-    background-image: -moz-linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
-    background-image: -webkit-linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
-    background-image: -o-linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: linear-gradient( 90deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: -moz-linear-gradient( 90deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: -webkit-linear-gradient( 90deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: -o-linear-gradient( 90deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
     border-top-right-radius: 10px;
     border-bottom-right-radius: 50px;
     z-index: 1;
