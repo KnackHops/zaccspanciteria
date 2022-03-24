@@ -52,7 +52,6 @@ const Contacts = () => {
     useEffect( () => {
         if ( pathname === "/" ) seenHandler();
     }, [ scroll ] )
-    console.log( process.env )
     return (   
         <SectionWrapper sectionClass={ "fd contacts" }>
                 <div className={`contacts-info-con fd ${ seen && "-seen" }`}>
@@ -88,7 +87,7 @@ const Contacts = () => {
                 </div>
                 <div className='map-container' style={ { height: '100%', width: '100%' } }>
                     <GoogleMapReact
-                        bootstrapURLKeys={ { key: process.env.REACT_APP_MAP_API } }
+                        bootstrapURLKeys={ { key: process?.env["REACT_APP_MAP_API"] } }
                         defaultCenter={ googleMapData.center }
                         defaultZoom={ googleMapData.zoom }
                         layerTypes={ googleMapData.layerTypes }
