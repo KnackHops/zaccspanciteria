@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import Header from "./header/Header";
 import Main from "./main/Main";
 import Home from "./main/sections/Home";
@@ -24,6 +24,7 @@ const UnderRoot = () => {
                         <Route path="contacts" element={ <Contacts /> } />
                         <Route path="menu" element={ <Menu /> } />
                         <Route path="toppings" element={ <Toppings /> } />
+                        <Route path="*" element={ <Navigate to="" /> } />
                     </Route>
                 </Routes>
                 <Footer />
