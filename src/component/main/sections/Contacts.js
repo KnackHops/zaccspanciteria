@@ -88,7 +88,7 @@ const Contacts = () => {
                 </div>
                 <div className='map-container' style={ { height: '100%', width: '100%' } }>
                     <GoogleMapReact
-                        bootstrapURLKeys={ { key: 'AIzaSyCnFvSsfsRdHBv38rvLD7fhdRRD_GIJG4w' } }
+                        bootstrapURLKeys={ { key: process.env.MAP_API } }
                         defaultCenter={ googleMapData.center }
                         defaultZoom={ googleMapData.zoom }
                         layerTypes={ googleMapData.layerTypes }
