@@ -16,3 +16,7 @@ code {
 body {
   overflow-x: hidden;
 }
+
+section, body, html, header, footer {
+  overflow-x: hidden;
+}
