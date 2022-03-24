@@ -91,10 +91,10 @@ div.buko-list-con li::after {
     content: "";
     height: 40px;
     width: 120px;
-    background-image: linear-gradient( 180deg,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
     background-image: -moz-linear-gradient( 180deg,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
     background-image: -o-linear-gradient( 180deg,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
     background-image: -webkit-linear-gradient( 180deg,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
+    background-image: linear-gradient( 180deg,  rgba( 0, 0, 0, .35 ) -40%, transparent, rgba( 0, 0, 0, .35 ) 140% );
     box-shadow: 0 0 10px rgba( 0, 15, 10, 1 );
     border-radius: 5px;
 }

@@ -3,10 +3,10 @@ div.contacts-con {
     padding-top: 120px;
     min-height: 820px;
     background-color: rgba(246, 246, 246, 1);
-    background-image: linear-gradient( 90deg, rgba( 246, 246, 230, 1 ), transparent );
     background-image: -moz-linear-gradient( 90deg, rgba( 246, 246, 230, 1 ), transparent );
     background-image: -o-linear-gradient( 90deg, rgba( 246, 246, 230, 1 ), transparent );
     background-image: -webkit-linear-gradient( 90deg, rgba( 246, 246, 230, 1 ), transparent );
+    background-image: linear-gradient( 90deg, rgba( 246, 246, 230, 1 ), transparent );
 }
 
 div.contacts-con > section {
