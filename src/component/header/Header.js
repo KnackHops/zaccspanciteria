@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import useSizeMonitor from '../../hooks/useSizeMonitor';
 import AnyList from '../../non-hooks/AnyList';
@@ -15,11 +15,11 @@ const Header = () => {
 
     // self explanatory
     // e = null, for manual calls
-    const burgerHandler = ( e = null ) => {
+    const burgerHandler = useCallback( ( e = null ) => {
         if ( e ) e.preventDefault();
 
         setBurger( !openBurger );
-    }
+    }, [ setBurger ] )
 
     // whenever a link is clicked we close the burger if it's open
     const linkClicked = () => {
@@ -29,48 +29,44 @@ const Header = () => {
     }
 
     // the navigation lists for easier readability
-    const navList = useMemo( () => {
-        const _navList = [
-            {
-                label: "Home",
-                whichEl: "navlink",
-                passPara: {
-                    to: "",
-                    className: activeNav,
-                    onClick: linkClicked
-                }
-            },
-            {
-                label: "Menu",
-                whichEl: "navlink",
-                passPara: {
-                    to: "menu",
-                    className: activeNav,
-                    onClick: linkClicked
-                }
-            },
-            {
-                label: "Toppings",
-                whichEl: "navlink",
-                passPara: {
-                    to: "toppings",
-                    className: activeNav,
-                    onClick: linkClicked
-                }
-            },
-            {
-                label: "Contact Us",
-                whichEl: "navlink",
-                passPara: {
-                    to: "contacts",
-                    className: activeNav,
-                    onClick: linkClicked
-                }
+    const navList = [
+        {
+            label: "Home",
+            whichEl: "navlink",
+            passPara: {
+                to: "",
+                className: activeNav,
+                onClick: linkClicked
             }
-        ]
-
-        return _navList
-    }, [ linkClicked, activeNav ] )
+        },
+        {
+            label: "Menu",
+            whichEl: "navlink",
+            passPara: {
+                to: "menu",
+                className: activeNav,
+                onClick: linkClicked
+            }
+        },
+        {
+            label: "Toppings",
+            whichEl: "navlink",
+            passPara: {
+                to: "toppings",
+                className: activeNav,
+                onClick: linkClicked
+            }
+        },
+        {
+            label: "Contact Us",
+            whichEl: "navlink",
+            passPara: {
+                to: "contacts",
+                className: activeNav,
+                onClick: linkClicked
+            }
+        }
+    ]
 
     // observer for resizing
     // and burger

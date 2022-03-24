@@ -72,10 +72,10 @@ const Contacts = () => {
                             </p>
                             <ul>
                                 <li>
-                                    <a href='https://www.facebook.com/ZACCs-Shawarma-2327963654123657' target={"_blank"} > Zacc's </a>
+                                    <a href='https://www.facebook.com/ZACCs-Shawarma-2327963654123657' target={"_blank"} rel="noreferrer" > Zacc's </a>
                                 </li>
                                 <li>
-                                    <a href='https://www.facebook.com/cherrypie.nicolas' target={"_blank"} >Cherry Pie Telan ( Owner )</a>
+                                    <a href='https://www.facebook.com/cherrypie.nicolas' target={"_blank"} rel="noreferrer" >Cherry Pie Telan ( Owner )</a>
                                 </li>
                             </ul>
                         </div>
