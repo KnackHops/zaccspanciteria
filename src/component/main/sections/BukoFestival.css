@@ -10,7 +10,7 @@ div.buko-festival-con > section {
     align-items: center;
     /* background-color: rgba( 246, 165, 76, 1 ); */
     background-color: rgba( 0, 15, 10, 1 );
-    background-image: url('/src/images/festivedecor.svg');
+    background-image: url('../../../images/festivedecor.svg');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 300px;
@@ -80,7 +80,7 @@ div.buko-list-con li {
     display: flex;
     padding: 20px;
     background-color: rgba( 246, 246, 230, 1 );
-    background-image: url('/src/images/demonslayerref.svg');
+    background-image: url('../../../images/demonslayerref.svg');
     background-size: 85px;
     background-position: center;
 }

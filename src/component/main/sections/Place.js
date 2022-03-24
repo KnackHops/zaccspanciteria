@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import SectionWrapper from "../../../wrapper/SectionWrapper"
 import './Place.css'
 

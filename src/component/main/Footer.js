@@ -13,7 +13,7 @@ const Footer = () => {
                 <div>
                         <p> Aldrian Telan </p>
                         <p> Did dis </p>
-                        <p> github page: <a href='https://github.com/KnackHops' target={"_blank"}> Here! </a> </p>
+                        <p> github page: <a href='https://github.com/KnackHops' target={"_blank"} rel="noreferrer"> Here! </a> </p>
                 </div>
             </footer>
         </div>

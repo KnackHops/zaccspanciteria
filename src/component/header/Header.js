@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
+import { useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import useSizeMonitor from '../../hooks/useSizeMonitor';
 import AnyList from '../../non-hooks/AnyList';
@@ -8,7 +8,7 @@ import './Header.css'
 const Header = () => {
     const { pathname } = useLocation();
     // className for active navigations
-    const activeNav = ( { isActive  } ) => isActive  ? "-activeNav" : ""
+    const activeNav = useCallback( ( { isActive  } ) => isActive  ? "-activeNav" : "", [] )
 
     // the burger for used on smaller viewports
     const [ openBurger, setBurger ] = useState( false );
@@ -22,11 +22,11 @@ const Header = () => {
     }
 
     // whenever a link is clicked we close the burger if it's open
-    const linkClicked = () => {
+    const linkClicked = useCallback( () => {
         if ( openBurger ) burgerHandler();
 
         window.scrollTo( { top: 0 } )
-    }
+    }, [] )
 
     // the navigation lists for easier readability
     const navList = useMemo( () => {

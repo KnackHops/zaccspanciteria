@@ -1,4 +1,4 @@
-import { createContext, useEffect } from "react";
+import { createContext } from "react";
 import { Routes, Route } from "react-router-dom"
 import Header from "./header/Header";
 import Main from "./main/Main";
