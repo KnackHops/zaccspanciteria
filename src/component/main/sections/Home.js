@@ -1,15 +1,16 @@
-import SectionWrapper from "../../../wrapper/SectionWrapper"
 import Gallery from "./Gallery";
 import Menu from "./Menu";
 import './Home.css';
-import Place from "./Place";
+import Contacts from "./Contacts";
+import BukoFestival from "./BukoFestival";
 
 const Home = () => {
     return (
         <>
             <Gallery />
             <Menu />
-            <Place />
+            <BukoFestival />
+            <Contacts />
         </>
     )
 }

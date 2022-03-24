@@ -78,7 +78,7 @@ const Menu = () => {
             },
             {
                 label: "Buko Halo",
-                price: 60
+                price: 75
             }
         ]
     }, [] )
@@ -100,7 +100,7 @@ const Menu = () => {
         ]
     }, [] )
 
-    const [ animClass, setdAnimClass ] = useState( "" );
+    const [ see, setSee ] = useState( false );
     const { scroll } = useContext( ScrollContext );
     const { pathname } = useLocation();
 
@@ -112,13 +112,19 @@ const Menu = () => {
         // we can't deduct too much because of smaller viewports
         // the sc is the top of the viewable screen
 
-        if ( scroll > 2650 && pathname === "/" && scroll < 3660  ) {
-            console.log( "hey! we can do something here if you want!" )
-        } 
-    }, [ scroll ] )
+        // let's use observer instead
+        if ( pathname === "/" ) {
+            const body = document.querySelector("body");
+    
+            const animMultipler = body.clientWidth > 870 ? .3 : .25
+
+            if ( scroll > ( body.clientHeight * animMultipler )  ) setSee( true ) 
+            else setSee( false )
+        } else setSee( true )
+    }, [ scroll, pathname ] )
 
     return (
-        <SectionWrapper sectionClass={ "menu" }>
+        <SectionWrapper sectionClass={ `${ see ? "-see" : "" } menu` }>
             <h2>
                 Menu
             </h2>

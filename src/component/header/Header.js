@@ -25,7 +25,7 @@ const Header = () => {
     const linkClicked = () => {
         if ( openBurger ) burgerHandler();
 
-        window.scrollTo( 0 )
+        window.scrollTo( { top: 0 } )
     }
 
     // the navigation lists for easier readability
@@ -59,7 +59,7 @@ const Header = () => {
                 }
             },
             {
-                label: "Contacts",
+                label: "Contact Us",
                 whichEl: "navlink",
                 passPara: {
                     to: "contacts",

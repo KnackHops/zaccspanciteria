@@ -1,11 +1,191 @@
-div.home-place-con {
-    height: 860px;
-    min-height: 570px;
-    padding: 120px 0 120px 0;
-    background-color: rgba( 0, 15, 10, 1 );
+div.place-con {
+    position: relative;
+    padding: 80px 0 40px 0;
+    background-color: rgba( 44, 186, 117, 1);
+    background-color: rgba(246, 165, 76, 1);
 }
 
-div.home-place-con > section {
-    height: 100%;
+/* div.place-con::before,
+div.place-con::after {
+    position: absolute;
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: rgba(246, 165, 76, 1);
+    z-index: 0;
+} */
+
+div.place-con::before {
+    top: 0;
+    left: 0;
+}
+
+div.place-con::after {
+    bottom: 0;
+    right: 0;
+}
+
+div.place-con > section {
+    position: relative;
+    height: 860px;
+    min-height: 400px;
+    width: 100%;
+    z-index: 1;
+    flex-direction: column;
+    font-size: 160%;
+    align-items: center;
+}
+
+div.place-con > section h2 {
+    /* background-color: rgba( 246, 246, 230, 1 ); */
+    color: rgba( 246, 246, 230, 1 );
+    background-color: rgba( 0, 15, 10, 1);
+    box-shadow: 0 0 10px rgba( 0, 15, 10, 1);
+    padding: 5px 60px;
+    text-align: center;
+    text-shadow: 0 0 3px rgba( 0, 15, 10, 1 );
+    background-image: linear-gradient( to right, rgba( 246, 246, 246, .1 ) -20%, transparent, rgba( 246, 246, 246, .1 ) 120% );
+    background-image: -moz-linear-gradient( to right, rgba( 246, 246, 246, .1 ) -20%, transparent, rgba( 246, 246, 246, .1 ) 120% );
+    background-image: -o-linear-gradient( to right, rgba( 246, 246, 246, .1 ) -20%, transparent, rgba( 246, 246, 246, .1 ) 120% );
+    background-image: -webkit-linear-gradient( to right, rgba( 246, 246, 246, .1 ) -20%, transparent, rgba( 246, 246, 246, .1 ) 120% )
+}
+
+h2 span:nth-child(1) {
+    color: rgba( 44, 186, 117, 1);
+}
+
+h2 span:nth-child(2) {
+    color: rgba( 246, 165, 76, 1 );
+}
+
+div.highlight-con {
+    width: calc(100% - 10vw);
+    position: relative;
+    margin: 10px 0;
+    flex: 1;
+    background-color: rgba( 44, 186, 117, 1);
+    background-image: linear-gradient( to right, transparent, rgba( 246, 246, 246, .15 ), transparent );
+    background-image: -moz-linear-gradient( to right, transparent, rgba( 246, 246, 246, .15 ), transparent );
+    background-image: -o-linear-gradient( to right, transparent, rgba( 246, 246, 246, .15 ), transparent );
+    background-image: -webkit-linear-gradient( to right, transparent, rgba( 246, 246, 246, .15 ), transparent );
+    /* box-shadow: 0 0 10px rgba( 0, 15, 10, 1 ); */
     overflow: hidden;
+    padding: 10px 0;
+}
+
+div.highlight-con::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background-color: rgba( 0, 15, 10, 1 );
+    background-color: rgba(246, 165, 76, 1);
+    box-shadow: 0 0 10px rgba( 0, 15, 10, 1);
+    z-index: 0;
+    top: 0%;
+    left: calc(50% - 40%);
+    /* background-image: linear-gradient( to right, transparent, rgba( 246, 246, 246, .4 ), transparent ); */
+}
+
+div.highlight-con > div.highlight-inside {
+    position: relative;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.highlight-con span {
+    position: absolute;
+    height: 20%;
+    width: 30px;
+    bottom: calc(50% - 10%);
+    z-index: 1;
+    box-shadow: 0 0 5px rgba( 0, 15, 10, 1);
+    display: none;
+}
+
+div.highlight-con span.prev-btn {
+    background-color: rgba( 246, 165, 76, .25 );
+    left: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+div.highlight-con span.next-btn {
+    background-color: rgba( 44, 186, 117, .25 );
+    background-color: rgba( 246, 165, 76, .25 );
+    right: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+div.highlight-con span.prev-btn:hover {
+    background-color: rgba( 246, 165, 76, 1 );
+}
+
+div.highlight-con span.next-btn:hover {
+    background-color: rgba( 44, 186, 117, 1 );
+    background-color: rgba( 246, 165, 76, 1 );
+}
+
+div.highlight-con span:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba( 0, 15, 10, 1);
+}
+
+div.highlight-con span:active {
+    transform: scale( .9 );
+}
+
+ul.place-list-con {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-width: 1170px;
+    padding: 10px 0;
+    background-color: rgba( 0, 15, 10, 1 );
+    background-color: rgba( 44, 186, 117, 1 );
+    /* background-image: linear-gradient( to right, transparent, rgba( 246, 246, 246, .3 ), transparent, rgba( 246, 246, 246, .3 ) ); */
+    /* background-image: linear-gradient( to right, transparent, rgba( 0, 15, 10, .3 ), transparent, rgba( 0, 15, 10, .3 ) ); */
+    box-shadow: inset 0 0 10px rgba( 0, 15, 10, 1 );
+}
+
+ul.place-list-con li {
+    box-shadow: 0 0 10px rgba( 0, 15, 10, 1);
+    display: flex;
+}
+
+ul.place-list-con li:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba( 246, 246, 230, 1);
+    transform: scale( 1.1 );
+}
+
+ul.place-list-con li:active {
+    transform: scale(1);
+}
+
+ul.place-list-con li.-active-highlight {
+    box-shadow: 0 0 10px rgba( 246, 246, 246, 1 );
+}
+
+ul.place-list-con li img {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+@media only screen and ( max-width: 1170px ) {
+
+    div.place-con > section {
+        height: 600px;
+    }
+
+    div.highlight-con span {
+        display: block;
+    }
+
+    ul.place-list-con {
+        display: none;
+    }
 }

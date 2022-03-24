@@ -82,18 +82,32 @@ div.nav-burger > span {
 div.nav-con ul.nav-list {
     padding: 35px 0;
     font-size: 150%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 ul.nav-list li a {
     font-weight: 600;
     color: rgba( 246, 246, 246, 1 );
-    padding: 5px 10px;
+    padding: 5px 0;
 }
 
+
 ul.nav-list li a.-activeNav {
-    color: black;
+    position: relative;
+    color: rgba( 246, 165, 76, 1 );
+    /* background-color: rgba( 246, 165, 76, 1 ); */
+    /* background-color: rgba( 44, 186, 117, 1 ); */
+    /* border-radius: 8px; */
+}
+
+ul.nav-list li a.-activeNav::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
     background-color: rgba( 246, 165, 76, 1 );
+    left: 0;
+    bottom: -10px;
 }
 
 div.header-design-con {
@@ -141,8 +155,10 @@ div.smoke-con > div.actual-smoke {
     visibility: hidden;
     height: 60px;
     flex: 1;
-    background-color: rgba( 246, 246, 246, 1 );
-    background: linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: -moz-linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: -o-linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
+    background-image: -webkit-linear-gradient( to top, rgba( 246, 246, 246, 0 ), rgba( 246, 246, 246, 1 ) );
     z-index: 2;
     border-radius: 20px;
     animation-name: smoke-anim;
@@ -174,7 +190,6 @@ div.egg-con {
 }
 
 div.egg-yellow {
-    /* top: 45px; */
     height: 13px;
     width: 100px;
     background-color: yellow;
@@ -182,12 +197,14 @@ div.egg-yellow {
 }
 
 div.egg-white {
-    /* top: 55px; */
     top: 12px;
     height: 25px;
     width: 170px;
     background-color: white;
-    background: linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: -moz-linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: -o-linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
+    background-image: -webkit-linear-gradient( to bottom, rgba( 246, 246, 246, 1 ), wheat );
     border-top-right-radius: 500px;
 }
 
@@ -226,7 +243,10 @@ div.bowl-upper {
     height: 40px;
     width: 350px;
     background-color: rgba( 55, 59, 45, 1);
-    background: linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1) );
+    background-image: linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: -moz-linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: -webkit-linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
+    background-image: -o-linear-gradient( to right, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1 ) );
     border-top-right-radius: 10px;
     border-bottom-right-radius: 50px;
     z-index: 1;
@@ -238,7 +258,10 @@ div.bowl-side {
     height: 300px;
     width: 40px;
     background-color: rgba( 55, 59, 45, 1);
-    background: linear-gradient( 40deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1) );
+    background-image: linear-gradient( 40deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1) );
+    background-image: -moz-linear-gradient( 40deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1) );
+    background-image: -o-linear-gradient( 40deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1) );
+    background-image: -webkit-linear-gradient( 40deg, rgba( 0, 15, 10, 1) 0% 10%, rgba( 55, 59, 45, 1) );
     transform: rotate( 10deg );
     border-top-right-radius: 10px;
     border-bottom-right-radius: 50px;
@@ -251,7 +274,10 @@ div.bowl-bottom {
     width: 302px;
     border-bottom-right-radius: 50px;
     top: 307px;
-    background: linear-gradient( 30deg, rgba( 0, 15, 10, 1), rgba( 133, 96, 67, 1 ) );
+    background-image: linear-gradient( 30deg, rgba( 0, 15, 10, 1) -40px, rgba( 246, 165, 76, 1 ) );
+    background-image: -moz-linear-gradient( 30deg, rgba( 0, 15, 10, 1) -40px, rgba( 246, 165, 76, 1 ) );
+    background-image: -o-linear-gradient( 30deg, rgba( 0, 15, 10, 1) -40px, rgba( 246, 165, 76, 1 ) );
+    background-image: -webkit-linear-gradient( 30deg, rgba( 0, 15, 10, 1) -40px, rgba( 246, 165, 76, 1 ) );
 }
 
 @media only screen and ( max-height: 600px ) {
