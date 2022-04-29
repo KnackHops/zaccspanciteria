@@ -353,6 +353,9 @@ div.bowl-bottom {
     div.nav-con.-activeBurger li a.-activeNav {
         color: white;
     }
+    div.header-con div.nav-con ul.nav-list {
+        padding: 60px 0;
+    }
 
     div.nav-con nav ul {
         height: 100vh;
@@ -363,6 +366,7 @@ div.bowl-bottom {
     div.nav-burger {
         visibility: visible;
         z-index: 9999;
+        padding: 0;
     }
 
     div.header-design-con {
